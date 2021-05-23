@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import page1 from "../views/page1.vue";
+import CartList from '../components/cart/Cart_List.vue';
+import ProductList from '../components/product/Product_List.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,6 +26,18 @@ const routes = [
     path: "/page1",
     name: "page1",
     component: page1,
+  },
+ {
+    path: '/inventory',
+    component: ProductList
+  },
+  {
+    path: '/cart',
+    component: CartList
+  },
+  {
+    path: '/',
+    redirect: '/inventory'
   },
   
 ];
